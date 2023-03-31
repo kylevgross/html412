@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Page title goes here-->
+ <title>Test</title>
+
+ <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+ 
+ <!-- Link to stylesheet-->
+ <link href="file:^Style/css/style.css" rel="stylesheet" type="text/css" media="all">
+ <!-- Link to js files for weather and nav bar-->
+
+ <script src="module://js|module://js/rc/jquery/jquery-3.4.1.min" type="text/javascript"></script>
+ <script src="file:^Style/js/script.js"></script>
+
+ 
+ <!-- DO NOT EDIT!!!-->
+     <script type='text/javascript'>var require = typeof require === 'undefined' ? {} : require;</script>
+  <script>
+
+var require = {};
+
+require.urlArgs=require.urlArgs || 'version=768755292133;
+
+require.waitSeconds=0;
+
+require.config=require.config || {};
+
+require.config.ord=require.config.ord || {};
+
+require.config.ord.useLocalWbRc=false;
+
+require.config.baja=require.config.baja || {};
+
+require.config.baja.webdev=false;
+
+require.config.lex=require.config.lex || {};
+
+require.config.lex.webdev=false;
+
+require.hbs=require.hbs || {};
+
+require.hbs.disableI18n=require.hbs.disableI18n===undefined?true:require.hbs.disableI18n;
+
+require.config['nmodule/js/rc/lex/lex']={storageId:'768755292133',lang:'en-US'};
+
+require.paths=require.paths || {};
+
+require.paths.nmodule=require.paths.nmodule || '/module';
+
+require.paths.Promise=require.paths.Promise || '/module/js/rc/bluebird/bluebird.min';
+
+require.paths.bajaScript=require.paths.bajaScript || '/module/bajaScript/rc';
+
+require.paths.bajaux=require.paths.bajaux || '/module/bajaux/rc';
+
+require.paths.jquery=require.paths.jquery || '/module/js/rc/jquery/jquery.min';
+
+require.paths.dialogs=require.paths.dialogs || '/module/js/rc/dialogs/dialogs';
+
+require.paths.ord=require.paths.ord || '/module/js/com/tridium/js/require/ord';
+
+require.paths.lex=require.paths.lex || '/module/js/rc/lex/lexplugin';
+
+require.paths.css=require.paths.css || '/module/js/com/tridium/js/ext/require/css';
+
+require.paths.baja=require.paths.baja || '/module/bajaScript/rc/plugin/baja';
+
+require.paths.obix=require.paths.obix || '/module/obixjs/rc/obix.built.min';
+
+require.paths.Handlebars=require.paths.Handlebars || '/module/js/rc/handlebars/handlebars.min';
+
+require.paths.underscore=require.paths.underscore || '/module/js/rc/underscore/underscore.min';
+
+require.paths.hbs=require.paths.hbs || '/module/js/rc/require-handlebars-plugin/hbs.built.min';
+
+require.paths.moment=require.paths.moment || '/module/js/rc/moment/moment.min';
+
+require.paths.d3=require.paths.d3 || '/module/js/rc/d3/d3.min';
+
+require.paths.hx=require.paths.hx || '/module/hx/javax/baja/hx/hx';
+
+require.paths.jqueryContextMenu=require.paths.jqueryContextMenu || '/module/js/rc/jquery/contextMenu/jquery.contextMenu';
+
+require.paths.ace=require.paths.ace || '/module/js/rc/ace';
+
+require.shim=require.shim || {};
+
+require.shim.d3=require.shim.d3 || {};
+
+require.shim.d3.exports=require.shim.d3.exports || 'd3';
+
+require.shim.jqueryContextMenu=require.shim.jqueryContextMenu || {deps:['jquery'],exports:'jQuery'};
+
+require.shim.base=require.shim.base || {deps:['baja!']};
+ </script> <script type='text/javascript'  src='module://js/com/tridium/js/ext/require/require.min.js'></script>
+  </head>
+
+<!-- begin body-->
+
+<body>
+
+  <div id="header">
+  <!-- copy link to site logo here, if yours is named "logo.png" there is no need to edit this-->
+     <div id="header-image" ><a href="file:^Style/index.html|view:web:FileDownloadView"><img id="logo" src="file:^Graphics/Logo/saintnickslogo.png" alt="Saint Nicholas Church"></a></div>
+     
+     <!-- username/logout link and weather info, nothing has to be changed unless you dont have humidity, in which case you can delete or comment out that div-->
+     <div id="header-info"> 
+      <div id="header-info-username">&nbsp;
+       <div class="header-info-username ellipsis">Getting username..
+       </div>
+      </div>
+      <div  class="header-info-logout">
+        <a href="/logout" target="_self">Log Out</a>
+      </div>
+         <div title="Click here to log out" id="header-info-arrow-down">▼
+         </div>
+         <div id="header-info-arrow-up">▲
+         </div>
+        </div>
+      </div>
+      
+<!-- Begin responsive nav bar-->
+<!-- all href targets must ="hx" to open in iframe below-->
+<div id='cssmenu'>
+<ul>
+  
+   <!-- this link does not have target="hx" so the link loads in the whole browser window, 
+   this can be useful when using multiple html index pages (multiple user views, buildings, etc)
+   and can also be used to link to external webpages or reloading the main page like in this case-->
+   <li class><a href='file:^Style/index.html|view:web:FileDownloadView'><span>Overview</span></a>
+   </li>
+
+    <li><a target="hx" href='station:|slot:/Drivers/Floorplan'><span>Floorplan</span></a> 
+   </li>
+   
+   <!-- this is a dropdown list where the main button is NOT a link-->
+   <li class><a href='#'><span>RTU's ▼</span></a>
+   <ul>
+   <li class><a target="hx" href='station:|slot:/Drivers/BacnetNetwork/Network1000/RTU_1_Chapel'><span>RTU 1 (Chapel) </span></a></li>
+   <li class><a target="hx" href='station:|slot:/Drivers/BacnetNetwork/Network1000/RTU_2_West$20Classrooms'><span>RTU 2 (W.Classrooms) </span></a></li>
+   <li class><a target="hx" href='station:|slot:/Drivers/BacnetNetwork/Network1000/RTU_3_Office'><span>RTU 3 (Office) </span></a></li>
+   <li class><a target="hx" href='station:|slot:/Drivers/BacnetNetwork/Network1000/RTU_4_GatheringRoom'><span>RTU 4 (Office) </span></a></li>
+   <li class><a target="hx" href='station:|slot:/Drivers/BacnetNetwork/Network1000/RTU_5_CommunityCenter'><span>RTU 5 (Community Center) </span></a></li>
+   <li class><a target="hx" href='station:|slot:/Drivers/BacnetNetwork/Network1000/RTU_6_Kitchen'><span>RTU 6 (Kitchen) </span></a></li>
+   <li class><a target="hx" href='station:|slot:/Drivers/BacnetNetwork/Network1000/RTU_7_SWEntry'><span>RTU 7 (SW Entry) </span></a></li>
+   </ul>
+   </li>
+   
+   <li class><a href='#'><span>AHU's ▼</span></a>
+   <ul>
+   <li class><a target="hx" href='station:|slot:/Drivers/NrioNetwork/Nrio34Module/points/AHU1Control'><span>AHU 1 (Sanctuary) </span></a></li>
+   <li class><a target="hx" href='station:|slot:/Drivers/BacnetNetwork/Network1000/AHU2_ChoirLoft'><span>AHU 2 (Choir Loft) </span></a></li>
+   <li class><a target="hx" href='station:|slot:/Drivers/BacnetNetwork/Network1000/AHU3_NarthexEntry'><span>AHU 3 (Narthex Entry) </span></a></li>
+   <li class><a target="hx" href='station:|slot:/Drivers/BacnetNetwork/Network1000/AHU4_InnerNarthex'><span>AHU 4 (Inner Narthex) </span></a></li>
+   </ul>
+   </li>
+   
+   
+    <li><a target="hx" href='station:|slot:/Drivers/NrioNetwork/Nrio34Module/points/BoilerProgramming'><span>Hot Water System </span></a> 
+   </li>
+   
+   <li><a target="hx" href='station:|slot:/Drivers/NrioNetwork/Nrio34Module/points/ChillerControl'><span>Chilled Water System </span></a> 
+   </li>
+  
+     <li class><a href='#'><span>Schedules ▼</span></a>
+   <ul>
+   <li class><a target="hx" href='station:|slot:/Drivers/BacnetNetwork/Network1000/RTU_1_Chapel/points/BooleanSchedule'><span>Chapel Schedule</span></a></li>
+   <li class><a target="hx" href='station:|slot:/Drivers/BacnetNetwork/Network1000/RTU_2_West$20Classrooms/points/BooleanSchedule'><span>West Classrooms Schedule</span></a></li>
+   <li class><a target="hx" href='station:|slot:/Drivers/BacnetNetwork/Network1000/RTU_3_Office/points/BooleanSchedule'><span>Office/East Classrooms Schedule</span></a></li>
+   <li class><a target="hx" href='station:|slot:/Drivers/BacnetNetwork/Network1000/RTU_4_GatheringRoom/points/BooleanSchedule'><span>Gathering Room Schedule</span></a></li>
+   <li class><a target="hx" href='station:|slot:/Drivers/BacnetNetwork/Network1000/RTU_5_CommunityCenter/points/BooleanSchedule'><span>Community Center Schedule</span></a></li>
+   <li class><a target="hx" href='station:|slot:/Drivers/BacnetNetwork/Network1000/RTU_6_Kitchen/points/BooleanSchedule'><span>Kitchen Schedule</span></a></li>
+   <li class><a target="hx" href='station:|slot:/Drivers/BacnetNetwork/Network1000/RTU_7_SWEntry/points/BooleanSchedule'><span>SouthWest Entry Schedule</span></a></li>
+   <li class><a target="hx" href='station:|slot:/Drivers/BacnetNetwork/SanctuarySchedule'><span>Sanctuary AHU's Schedule</span></a></li>
+   </ul>
+   </li>
+   
+   <li><a target="hx" href='history:|view:webChart:ChartWidget'><span>Trending</span></a> 
+   </li>
+   
+   
+ <!-- this is the last link, so it must contain the class='last' tag - this is required for the nav bar to scale properly -->
+   <!-- tYou will also notice the span does not contain text like the other links, 
+   this is because the bajascript at the bottom of the page dynamically changes the text/color based on the number of alarms-->      
+   <li class='last'><a target="hx" href='station:|slot:/Services/AlarmService/ConsoleRecipient'><span id="AllAlarms" class="AllAlarms" ></span>Alarms</a>
+   
+   </li>
+   
+</ul>
+</div>
+<!--Link to main px/hx homepage you would like to use here-->
+<div>
+ <iframe class="hx" name="hx" id="appletcontainer" src="station:|slot:/Drivers/Home" ></iframe>
+</div>
+
+
+<!-- Bajascript begins below - edit ords as needed -->
+<script type="text/javascript">
+ require(["baja!"], function (baja) {"use strict";
+
+
+
+ 
+        var allAlarmSub = new baja.Subscriber(); 
+        
+            allAlarmSub.attach("changed", function(prop) {
+            
+            document.getElementById("AllAlarms").innerHTML = "All Alarms (" + this.getOut().getValue() + ")";
+              
+                  var val = this.getOut().getValue();
+                  
+                 if (val > 0){
+                document.getElementById("AllAlarms").style.color = "#FF3333";}
+                else {
+                  document.getElementById("AllAlarms").style.color = "#fff";
+            } 
+
+
+            });
+             //this is the link to the alarm count on the alarm service wiresheet, either name it AllAlarms or copy your name here
+            baja.Ord.make("station:|slot:/Services/AlarmService/AlarmCount").get({
+               subscriber: allAlarmSub
+            });;
+            
+            
+            var oatSub = new baja.Subscriber(); 
+
+            oatSub.attach("changed", function(prop) {
+              
+               
+            
+            document.getElementById("temp").innerHTML ="Outdoor Temp: " + this.getOut().getValue() + " °F";
+           
+            });
+             //this is the link to the OAT, copy your ORD here
+            baja.Ord.make("station:|slot:/Drivers/Home/OAT").get({
+               subscriber: oatSub
+            });
+            
+                 
+      
+            
+            
+            
+            
+     
+     //get username & append to header
+    $(".header-info-username").empty().append(baja.getUserName());
+    $("#header-info-arrow-down").on("click", function () {
+     $("#header-info-arrow-down").css( "display", "none" );
+     $("#header-info-arrow-up").css( "display", "table-cell" );
+     $(".header-info-username").animate({top: "-100%"}, 150, function() {
+      $(".header-info-logout").animate({top: 20}, 150);
+     });
+    });
+    //logoff code
+    $("#header-info-arrow-up").on("click", function () {
+     $("#header-info-arrow-up").css( "display", "none" );
+     $("#header-info-arrow-down").css( "display", "table-cell" );
+     $(".header-info-logout").animate({top: "-100%"}, 150, function() {
+      $(".header-info-username").animate({top: 20}, 150);
+     });
+     });
+    
+      baja.start();
+
+      })
+ 
+ 
+</script>
+           
+</body>
+</html>
